@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matriz de literatura</title>
+<style>
+:root { --bg:#fff; --fg:#1a1a1a; --muted:#666; --line:#ddd; --head:#f4f4f4; --ok:#1b7f3b; --okbg:#e6f4ea; --warn:#8a5a00; --warnbg:#fff4d6; --nd:#666; --ndbg:#eee; --link:#0b57d0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#151515; --fg:#eaeaea; --muted:#aaa; --line:#333; --head:#1f1f1f; --ok:#7fd39a; --okbg:#173a24; --warn:#f0c46b; --warnbg:#3d2f10; --nd:#bbb; --ndbg:#2a2a2a; --link:#8ab4f8; } }
+:root[data-theme="dark"] { --bg:#151515; --fg:#eaeaea; --muted:#aaa; --line:#333; --head:#1f1f1f; --ok:#7fd39a; --okbg:#173a24; --warn:#f0c46b; --warnbg:#3d2f10; --nd:#bbb; --ndbg:#2a2a2a; --link:#8ab4f8; }
+* { box-sizing:border-box; }
+body { margin:0; padding:24px 16px; background:var(--bg); color:var(--fg); font:15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width:1400px; margin:0 auto; }
+h1 { font-size:1.6rem; margin:0 0 4px; }
+.sub { color:var(--muted); margin:0 0 20px; }
+h2 { font-size:1.15rem; margin:28px 0 8px; border-bottom:1px solid var(--line); padding-bottom:4px; }
+h2 small { color:var(--muted); font-weight:normal; font-size:.85rem; }
+table { width:100%; border-collapse:collapse; font-size:.88rem; }
+th, td { text-align:left; vertical-align:top; padding:8px 8px; border-bottom:1px solid var(--line); }
+th { background:var(--head); font-weight:600; position:sticky; top:0; }
+td.n { color:var(--muted); width:2.2em; }
+.tit { font-weight:600; }
+.aut { color:var(--muted); font-size:.85rem; }
+.meta { font-size:.8rem; color:var(--muted); margin-top:4px; }
+.base { font-family:ui-monospace, Menlo, Consolas, monospace; }
+a { color:var(--link); }
+.badge { display:inline-block; padding:1px 7px; border-radius:10px; font-size:.75rem; font-weight:600; }
+.badge.aberto { color:var(--ok); background:var(--okbg); }
+.badge.restrito { color:var(--warn); background:var(--warnbg); }
+.badge.nd { color:var(--nd); background:var(--ndbg); }
+.leg { font-size:.85rem; color:var(--muted); margin:0 0 8px; }
+@media (max-width: 900px) {
+  table, thead, tbody, tr, td, th { display:block; }
+  thead { display:none; }
+  tr { border:1px solid var(--line); border-radius:8px; padding:8px; margin-bottom:10px; }
+  td { border:0; padding:4px 0; }
+  td.n { display:none; }
+  td:not(:nth-child(2))::before { content:attr(data-l); display:block; font-size:.75rem; color:var(--muted); text-transform:uppercase; }
+}
+</style>
+</head>
+<body>
+<main>
+<h1>Matriz de literatura</h1>
+<p class="sub">Dissertação: viés decisório entre juízes e juízas em ações de saúde no Brasil (27 TJs e 6 TRFs). Semente de 25 referências construída por snowballing; ver <code>protocolo-revisao.md</code>, seção 10. Links verificados em 28/09/2026.</p>
+<p class="leg"><span class="badge aberto">Acesso aberto</span> texto completo público &nbsp; <span class="badge restrito">Acesso restrito</span> só resumo ou paywall &nbsp; <span class="badge nd">Sem link</span> não localizado. Resumo: 16 abertos, 8 restritos, 1 sem link.</p>
+<h2>1 · Gênero do julgador e desfecho <small>10 ref.</small></h2>
+<table>
+<thead><tr><th>#</th><th>Referência</th><th>Tipo de estudo</th><th>Construto</th><th>Achado</th><th>Lacuna</th><th>Relação com a pergunta</th></tr></thead>
+<tbody>
+<tr>
+<td class="n">1</td>
+<td><div class="tit"><a href="https://doi.org/10.1111/j.1540-5907.2010.00437.x" target="_blank" rel="noopener">Untangling the Causal Effects of Sex on Judging</a></div><div class="aut">Boyd, C. L. &amp; Epstein, L. &amp; Martin, A. D. (2010)</div><div class="meta"><span class="badge restrito">Acesso restrito</span> <span class="base">WoS</span> · DOI do periódico (paywall); preprint aberto em https://doi.org/10.2139/ssrn.1001748</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (cortes de apelação dos EUA, pareamento)</td>
+<td data-l="Construto">gênero do julgador</td>
+<td data-l="Achado">Efeito individual e de painel do gênero só em casos de discriminação sexual. Nulo nas demais 12 áreas</td>
+<td data-l="Lacuna">Gênero por cadastro oficial. Colegiado, não 1º grau. Sem causas de saúde</td>
+<td data-l="Relação com a pergunta">Marco da janela. Sustenta a hipótese nula em saúde e a exigência de estratos comparáveis</td>
+</tr><tr>
+<td class="n">2</td>
+<td><div class="tit"><a href="https://arxiv.org/abs/2405.07240" target="_blank" rel="noopener">Fight like a Woman: Domestic Violence and Female Judges in Brazil</a></div><div class="aut">Laneuville &amp; Possebom, V. (2026)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">cinzenta</span> · Working paper no arXiv, sem publicação em periódico</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (TJSP, distribuição aleatória entre varas, comarca × trimestre)</td>
+<td data-l="Construto">gênero do julgador</td>
+<td data-l="Achado">Juízas decidem de forma diferente em violência doméstica no TJSP, explorando o sorteio entre varas</td>
+<td data-l="Lacuna">Gênero por nome. Working paper. Um tribunal e um tipo de causa</td>
+<td data-l="Relação com a pergunta">Artigo-base. O desenho tribunal × ano da dissertação é a versão mais grossa do estrato comarca × trimestre deste estudo</td>
+</tr><tr>
+<td class="n">3</td>
+<td><div class="tit"><a href="https://www.researchgate.net/publication/292036520_Does_judge_gender_matter_Decision_making_in_state_supreme_courts" target="_blank" rel="noopener">Does Judge Gender Matter? Decision Making in State Supreme Courts</a></div><div class="aut">Songer, D. R. &amp; Crews-Meyer, K. A. (2000)</div><div class="meta"><span class="badge restrito">Acesso restrito</span> <span class="base">snowballing</span> · Sem DOI localizado; Social Science Quarterly 81(3)</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (supremas cortes estaduais dos EUA)</td>
+<td data-l="Construto">gênero do julgador</td>
+<td data-l="Achado">Juízas mais liberais em obscenidade e pena de morte. Efeito de painel sobre colegas homens</td>
+<td data-l="Lacuna">Gênero por cadastro. Anterior à janela. Supremas cortes</td>
+<td data-l="Relação com a pergunta">Seminal. Mostra que o efeito depende da área do direito</td>
+</tr><tr>
+<td class="n">4</td>
+<td><div class="tit"><a href="https://yalelawjournal.org/pdf/211_35ddrdm9.pdf" target="_blank" rel="noopener">Female Judges Matter: Gender and Collegial Decisionmaking in the Federal Appellate Courts</a></div><div class="aut">Peresie, J. L. (2005)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">snowballing</span> · PDF aberto no site do Yale Law Journal</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (cortes federais de apelação dos EUA)</td>
+<td data-l="Construto">gênero do julgador</td>
+<td data-l="Achado">Presença de juíza no painel aumenta êxito da autora em discriminação e assédio sexual</td>
+<td data-l="Lacuna">Gênero por cadastro. Colegiado. Anterior à janela</td>
+<td data-l="Relação com a pergunta">Sustenta representação e efeito de painel. Não há painel em 1º grau</td>
+</tr><tr>
+<td class="n">5</td>
+<td><div class="tit"><a href="https://doi.org/10.2307/3005975" target="_blank" rel="noopener">Women and Men Policymakers: Does the Judge&#x27;s Gender Affect the Sentencing of Criminal Defendants?</a></div><div class="aut">Steffensmeier, D. &amp; Hebert, C. (1999)</div><div class="meta"><span class="badge restrito">Acesso restrito</span> <span class="base">snowballing</span> · DOI do periódico (paywall)</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (sentenças criminais na Pensilvânia)</td>
+<td data-l="Construto">gênero do julgador</td>
+<td data-l="Achado">Juízas ligeiramente mais severas, com interação com características do réu</td>
+<td data-l="Lacuna">Gênero por cadastro. Criminal, não cível. Anterior à janela</td>
+<td data-l="Relação com a pergunta">Seminal. Direção do efeito não é sempre pró-parte vulnerável</td>
+</tr><tr>
+<td class="n">7</td>
+<td><div class="tit"><a href="https://chicagounbound.uchicago.edu/jls/vol34/iss1/3/" target="_blank" rel="noopener">Racial and Sex Disparities in Prison Sentences: The Effect of District-Level Judicial Demographics</a></div><div class="aut">Schanzenbach, M. M. (2005)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">snowballing</span> · PDF aberto no repositório da Universidade de Chicago; DOI https://doi.org/10.1086/425597</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (sentenças federais dos EUA por distrito)</td>
+<td data-l="Construto">interação julgador × parte</td>
+<td data-l="Achado">Maior proporção de juízas no distrito reduz a disparidade de pena por sexo do réu</td>
+<td data-l="Lacuna">Efeito agregado por distrito, não por juiz. Anterior à janela</td>
+<td data-l="Relação com a pergunta">Primeiro indício de in-group entre gênero do julgador e gênero da parte</td>
+</tr><tr>
+<td class="n">8</td>
+<td><div class="tit"><a href="https://doi.org/10.1093/qje/qjr022" target="_blank" rel="noopener">Judicial Ingroup Bias in the Shadow of Terrorism</a></div><div class="aut">Shayo, M. &amp; Zussman, A. (2011)</div><div class="meta"><span class="badge restrito">Acesso restrito</span> <span class="base">WoS</span> · DOI do periódico (paywall); preprint em SSRN 1639855</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (juizados de pequenas causas em Israel, distribuição aleatória)</td>
+<td data-l="Construto">interação julgador × parte</td>
+<td data-l="Achado">Viés de in-group étnico entre juiz e partes, reforçado por choques de terrorismo</td>
+<td data-l="Lacuna">In-group étnico, não de gênero. Contexto israelense</td>
+<td data-l="Relação com a pergunta">Modelo de identificação por sorteio e definição operacional de in-group bias</td>
+</tr><tr>
+<td class="n">9</td>
+<td><div class="tit"><a href="https://scholarship.law.upenn.edu/cgi/viewcontent.cgi?article=1354&amp;context=faculty_scholarship" target="_blank" rel="noopener">Do Judges Vary in Their Treatment of Race?</a></div><div class="aut">Abrams, D. S. &amp; Bertrand, M. &amp; Mullainathan, S. (2012)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">WoS</span> · PDF aberto no repositório da Penn Law; DOI https://doi.org/10.1086/666006</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (Cook County, distribuição aleatória)</td>
+<td data-l="Construto">estrato de comparação (judge effects)</td>
+<td data-l="Achado">Há variação sistemática entre juízes no tratamento racial, identificada por sorteio</td>
+<td data-l="Lacuna">Raça, não gênero. Criminal</td>
+<td data-l="Relação com a pergunta">Fundamenta o uso de judge effects e de erro-padrão agrupado por magistrado</td>
+</tr><tr>
+<td class="n">10</td>
+<td><div class="tit"><a href="https://doi.org/10.1086/696150" target="_blank" rel="noopener">When the Shadow Is the Substance: Judge Gender and the Outcomes of Workplace Sex Discrimination Cases</a></div><div class="aut">Knepper, M. (2018)</div><div class="meta"><span class="badge restrito">Acesso restrito</span> <span class="base">Scopus</span> · DOI do periódico (paywall); working paper aberto em SSRN 2965043</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (cortes distritais dos EUA, sorteio de juiz)</td>
+<td data-l="Construto">gênero do julgador</td>
+<td data-l="Achado">Juízas produzem mais acordos e resultados favoráveis a autoras em discriminação sexual</td>
+<td data-l="Lacuna">Gênero por cadastro. Só discriminação sexual</td>
+<td data-l="Relação com a pergunta">Efeito em 1º grau e por sorteio, o desenho mais próximo do da dissertação</td>
+</tr><tr>
+<td class="n">11</td>
+<td><div class="tit"><a href="https://doi.org/10.1111/j.1467-9930.2010.00317.x" target="_blank" rel="noopener">Gender, Critical Mass, and Judicial Decision Making</a></div><div class="aut">Collins, P. M. &amp; Manning, K. L. &amp; Carp, R. A. (2010)</div><div class="meta"><span class="badge restrito">Acesso restrito</span> <span class="base">Scopus</span> · DOI do periódico (só resumo)</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (cortes distritais dos EUA)</td>
+<td data-l="Construto">gênero do julgador</td>
+<td data-l="Achado">Diferenças de gênero aparecem quando a proporção de juízas no tribunal atinge massa crítica</td>
+<td data-l="Lacuna">Gênero por cadastro. Não há causas de saúde</td>
+<td data-l="Relação com a pergunta">Sugere testar heterogeneidade por proporção de juízas no tribunal</td>
+</tr>
+</tbody></table><h2>2 · Teoria <small>3 ref.</small></h2>
+<table>
+<thead><tr><th>#</th><th>Referência</th><th>Tipo de estudo</th><th>Construto</th><th>Achado</th><th>Lacuna</th><th>Relação com a pergunta</th></tr></thead>
+<tbody>
+<tr>
+<td class="n">6</td>
+<td><div class="tit"><a href="https://scholar.harvard.edu/files/msen/files/daughters.pdf" target="_blank" rel="noopener">Identifying Judicial Empathy: Does Having Daughters Cause Judges to Rule for Women&#x27;s Issues?</a></div><div class="aut">Glynn, A. N. &amp; Sen, M. (2015)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">Scopus</span> · PDF aberto no site da autora; DOI https://doi.org/10.1111/ajps.12118</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (cortes de apelação dos EUA, quase-experimento)</td>
+<td data-l="Construto">teoria (representação, empatia)</td>
+<td data-l="Achado">Juízes com filhas votam mais a favor em questões de gênero. Efeito maior entre homens</td>
+<td data-l="Lacuna">Mecanismo de empatia medido por proxy familiar. Colegiado</td>
+<td data-l="Relação com a pergunta">Sustenta mecanismo de experiência compartilhada por trás do efeito de gênero</td>
+</tr><tr>
+<td class="n">12</td>
+<td><div class="tit"><a href="https://doi.org/10.1146/annurev-polisci-051617-090650" target="_blank" rel="noopener">Bias and Judging</a></div><div class="aut">Harris, A. P. &amp; Sen, M. (2019)</div><div class="meta"><span class="badge restrito">Acesso restrito</span> <span class="base">Scopus</span> · DOI Annual Reviews (paywall); versão aberta em SSRN 3394078</div></td>
+<td data-l="Tipo de estudo">revisão narrativa</td>
+<td data-l="Construto">teoria (in-group, representação, atitudinal)</td>
+<td data-l="Achado">Sintetiza evidência de viés por identidade do juiz e por identidade da parte. Efeitos condicionais ao tipo de caso</td>
+<td data-l="Lacuna">Foco em EUA</td>
+<td data-l="Relação com a pergunta">Revisão de referência para a frente 2 (teoria) e para o construto de interação</td>
+</tr><tr>
+<td class="n">14</td>
+<td><div class="tit"><a href="https://www.hup.harvard.edu/books/9780674970960" target="_blank" rel="noopener">In a Different Voice: Psychological Theory and Women&#x27;s Development</a></div><div class="aut">Gilligan, C. (1982)</div><div class="meta"><span class="badge restrito">Acesso restrito</span> <span class="base">snowballing</span> · Página da editora (livro à venda)</div></td>
+<td data-l="Tipo de estudo">teórico</td>
+<td data-l="Construto">teoria (representação, ética do cuidado)</td>
+<td data-l="Achado">Mulheres raciocinariam moralmente com ênfase em cuidado e relações</td>
+<td data-l="Lacuna">Não empírico sobre juízes. Muito contestado</td>
+<td data-l="Relação com a pergunta">Origem da hipótese de que juízas decidiriam diferente</td>
+</tr>
+</tbody></table><h2>3 · Judicialização da saúde <small>7 ref.</small></h2>
+<table>
+<thead><tr><th>#</th><th>Referência</th><th>Tipo de estudo</th><th>Construto</th><th>Achado</th><th>Lacuna</th><th>Relação com a pergunta</th></tr></thead>
+<tbody>
+<tr>
+<td class="n">15</td>
+<td><div class="tit">Profissionalismo, gênero e diferença nas carreiras jurídicas</div><div class="aut">Bonelli, M. G. (2013)</div><div class="meta"><span class="badge nd">Sem link</span> <span class="base">snowballing</span> · Só registro comercial do ISBN 9788576003168</div></td>
+<td data-l="Tipo de estudo">qualitativo (carreiras jurídicas no Brasil)</td>
+<td data-l="Construto">contexto (socialização profissional)</td>
+<td data-l="Achado">Socialização profissional homogeneíza práticas. Diferença de gênero aparece mais na carreira do que na decisão</td>
+<td data-l="Lacuna">Qualitativo. Sem dados de decisão</td>
+<td data-l="Relação com a pergunta">Sustenta a hipótese nula por socialização no contexto brasileiro</td>
+</tr><tr>
+<td class="n">16</td>
+<td><div class="tit"><a href="https://www.cnj.jus.br/wp-content/uploads/2019/09/a18da313c6fdcb6f364789672b64fcef_c948e694435a52768cbc00bda11979a3.pdf" target="_blank" rel="noopener">Perfil Sociodemográfico dos Magistrados Brasileiros 2018</a></div><div class="aut">Conselho Nacional de Justiça (2019)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">cinzenta</span> · PDF oficial no site do CNJ</div></td>
+<td data-l="Tipo de estudo">levantamento oficial</td>
+<td data-l="Construto">contexto (medição de gênero)</td>
+<td data-l="Achado">Cerca de 38% dos magistrados são mulheres, com variação por tribunal e grau</td>
+<td data-l="Lacuna">Autodeclaração em censo, sem vínculo com decisões</td>
+<td data-l="Relação com a pergunta">Referência de gênero por cadastro para validar a inferência por nome e IBGE</td>
+</tr><tr>
+<td class="n">17</td>
+<td><div class="tit"><a href="https://www.hhrjournal.org/2013/08/29/the-right-to-health-in-the-courts-of-brazil-worsening-health-inequities/" target="_blank" rel="noopener">The right to health in the courts of Brazil: worsening health inequities?</a></div><div class="aut">Ferraz, O. L. M. (2009)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">Scopus</span> · Texto integral no site do periódico</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (decisões de saúde no Brasil)</td>
+<td data-l="Construto">contexto (judicialização da saúde)</td>
+<td data-l="Achado">Litígio de saúde concentra-se em autores com maior renda e tem altíssima taxa de deferimento</td>
+<td data-l="Lacuna">Sem gênero do julgador</td>
+<td data-l="Relação com a pergunta">Explica por que a taxa de procedência é alta e pouco variável, o que reduz a margem para viés</td>
+</tr><tr>
+<td class="n">18</td>
+<td><div class="tit"><a href="https://doi.org/10.1590/S0102-311X2009000800020" target="_blank" rel="noopener">Judicialização da política pública de assistência farmacêutica e equidade</a></div><div class="aut">Chieffi, A. L. &amp; Barata, R. B. (2009)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">SciELO</span> · DOI SciELO, acesso aberto</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (ações por medicamentos em São Paulo)</td>
+<td data-l="Construto">contexto (judicialização da saúde)</td>
+<td data-l="Achado">Ações concentradas em regiões mais ricas e com advogados privados</td>
+<td data-l="Lacuna">Sem gênero do julgador. Um município</td>
+<td data-l="Relação com a pergunta">Perfil do autor como covariável de balanceamento</td>
+</tr><tr>
+<td class="n">19</td>
+<td><div class="tit"><a href="https://doi.org/10.1590/0034-76121666" target="_blank" rel="noopener">Os impactos da judicialização da saúde no município de São Paulo: gasto público e organização federativa</a></div><div class="aut">Wang, D. W. L. &amp; Vasconcelos, N. P. &amp; Oliveira, V. E. &amp; Terrazas, F. V. (2014)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">SciELO</span> · DOI SciELO, acesso aberto</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (ações e gasto municipal)</td>
+<td data-l="Construto">contexto (judicialização da saúde)</td>
+<td data-l="Achado">Liminares quase universais e impacto orçamentário concentrado</td>
+<td data-l="Lacuna">Sem gênero do julgador</td>
+<td data-l="Relação com a pergunta">Mostra a centralidade da tutela de urgência, o desfecho VD2</td>
+</tr><tr>
+<td class="n">20</td>
+<td><div class="tit"><a href="https://www.hhrjournal.org/2016/04/27/the-judicialization-of-health-and-the-quest-for-state-accountability-evidence-from-1262-lawsuits-for-access-to-medicines-in-southern-brazil/" target="_blank" rel="noopener">The Judicialization of Health and the Quest for State Accountability: Evidence from 1,262 Lawsuits for Access to Medicines in Southern Brazil</a></div><div class="aut">Biehl, J. &amp; Socal, M. P. &amp; Amon, J. J. (2016)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">Scopus</span> · Texto integral no site do periódico; espelho em PMC5070692</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (ações no Rio Grande do Sul)</td>
+<td data-l="Construto">contexto (judicialização da saúde)</td>
+<td data-l="Achado">Autores majoritariamente de baixa renda, com Defensoria, e taxa de sucesso elevada</td>
+<td data-l="Lacuna">Sem gênero do julgador</td>
+<td data-l="Relação com a pergunta">Contrasta com Ferraz e Chieffi: perfil do autor varia por estado, justificando estratos por tribunal</td>
+</tr><tr>
+<td class="n">21</td>
+<td><div class="tit"><a href="https://www.cnj.jus.br/wp-content/uploads/conteudo/arquivo/2019/03/eae0a55729098701a9f49a22a9f3ce43.pdf" target="_blank" rel="noopener">Judicialização da saúde no Brasil: perfil das demandas, causas e propostas de solução</a></div><div class="aut">Conselho Nacional de Justiça &amp; Insper (2019)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">cinzenta</span> · PDF oficial no site do CNJ</div></td>
+<td data-l="Tipo de estudo">levantamento oficial (33 tribunais)</td>
+<td data-l="Construto">contexto (judicialização da saúde)</td>
+<td data-l="Achado">Crescimento de 130% das demandas de saúde entre 2008 e 2017. Predomínio de medicamentos e tratamentos</td>
+<td data-l="Lacuna">Relatório sem revisão por pares</td>
+<td data-l="Relação com a pergunta">Base nacional que delimita os assuntos CNJ usados no corpus</td>
+</tr>
+</tbody></table><h2>Nota PLN <small>5 ref.</small></h2>
+<table>
+<thead><tr><th>#</th><th>Referência</th><th>Tipo de estudo</th><th>Construto</th><th>Achado</th><th>Lacuna</th><th>Relação com a pergunta</th></tr></thead>
+<tbody>
+<tr>
+<td class="n">13</td>
+<td><div class="tit"><a href="https://users.nber.org/~dlchen/papers/Gender_Attitudes_in_the_Judiciary_AEJApplied.pdf" target="_blank" rel="noopener">Gender Attitudes in the Judiciary: Evidence from U.S. Circuit Courts</a></div><div class="aut">Ash, E. &amp; Chen, D. L. &amp; Ornaghi, A. (2024)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">WoS</span> · PDF aberto no site do autor; DOI https://doi.org/10.1257/app.20210435</div></td>
+<td data-l="Tipo de estudo">empírico quantitativo (embeddings sobre opiniões judiciais e votos)</td>
+<td data-l="Construto">PLN (nota) e gênero do julgador</td>
+<td data-l="Achado">Linguagem estereotipada de gênero no texto prediz votos contra direitos das mulheres e menor citação de juízas</td>
+<td data-l="Lacuna">Método de embeddings sem validação por anotadores humanos</td>
+<td data-l="Relação com a pergunta">Liga linguagem e resultado. Justifica tratar tom como proxy frágil e preferir o desfecho</td>
+</tr><tr>
+<td class="n">22</td>
+<td><div class="tit"><a href="https://doi.org/10.18653/v1/2020.findings-emnlp.261" target="_blank" rel="noopener">LEGAL-BERT: The Muppets straight out of Law School</a></div><div class="aut">Chalkidis, I. &amp; Fergadiotis, M. &amp; Malakasiotis, P. &amp; Aletras, N. &amp; Androutsopoulos, I. (2020)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">Scopus</span> · DOI ACL Anthology, acesso aberto</div></td>
+<td data-l="Tipo de estudo">empírico (PLN, pré-treino em texto jurídico)</td>
+<td data-l="Construto">PLN (nota)</td>
+<td data-l="Achado">BERT pré-treinado em direito supera o BERT genérico em tarefas jurídicas</td>
+<td data-l="Lacuna">Inglês. Sem sentimento. Sem português</td>
+<td data-l="Relação com a pergunta">Nota PLN (justificativa do abandono do tom): mostra que o piloto usava modelos sem adaptação ao português jurídico</td>
+</tr><tr>
+<td class="n">23</td>
+<td><div class="tit"><a href="https://vixra.org/abs/1910.0568" target="_blank" rel="noopener">Sentiment Classification Over Brazilian Supreme Court Decisions Using Multi-Channel CNN</a></div><div class="aut">Silva, M. O. (2019)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">snowballing</span> · Preprint no viXra, sem revisão por pares</div></td>
+<td data-l="Tipo de estudo">empírico (PLN, STF)</td>
+<td data-l="Construto">PLN (nota)</td>
+<td data-l="Achado">CNN multicanal atinge alta acurácia em classificação de polaridade de decisões do STF</td>
+<td data-l="Lacuna">Rótulo de sentimento definido pelo próprio estudo, sem validação externa</td>
+<td data-l="Relação com a pergunta">Nota PLN (justificativa do abandono do tom): sentimento em decisão brasileira é classificável, mas o rótulo não tem validade de construto clara</td>
+</tr><tr>
+<td class="n">24</td>
+<td><div class="tit"><a href="https://www.rintonpress.com/xjdi3/xjdi3-1/101-115.pdf" target="_blank" rel="noopener">SigmaLaw PBSA: A Deep Learning Approach for Aspect-Based Sentiment Analysis in Legal Opinion Texts</a></div><div class="aut">Rajapaksha, I. et al. (2022)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">Scopus</span> · PDF do editor, Journal of Data Intelligence 3(1), 2022</div></td>
+<td data-l="Tipo de estudo">empírico (PLN, ABSA)</td>
+<td data-l="Construto">PLN (nota)</td>
+<td data-l="Achado">Sentimento por aspecto em opiniões jurídicas em inglês</td>
+<td data-l="Lacuna">Inglês. Sem relação com identidade do juiz</td>
+<td data-l="Relação com a pergunta">Nota PLN (justificativa do abandono do tom): ilustra que sentimento jurídico é dependente de aspecto, o que o tom global por LLM ignorava</td>
+</tr><tr>
+<td class="n">25</td>
+<td><div class="tit"><a href="https://web.stanford.edu/~jgrimmer/tad2.pdf" target="_blank" rel="noopener">Text as Data: The Promise and Pitfalls of Automatic Content Analysis Methods for Political Texts</a></div><div class="aut">Grimmer, J. &amp; Stewart, B. M. (2013)</div><div class="meta"><span class="badge aberto">Acesso aberto</span> <span class="base">WoS</span> · PDF aberto no site do autor; DOI https://doi.org/10.1093/pan/mps028</div></td>
+<td data-l="Tipo de estudo">metodológico (revisão)</td>
+<td data-l="Construto">PLN (nota, validade)</td>
+<td data-l="Achado">Toda medida automática de texto precisa de validação contra julgamento humano</td>
+<td data-l="Lacuna">Ciência política, não direito</td>
+<td data-l="Relação com a pergunta">Nota PLN (justificativa do abandono do tom): justifica o abandono do tom por LLM sem validação por anotadores</td>
+</tr>
+</tbody></table>
+</main>
+</body>
+</html>
