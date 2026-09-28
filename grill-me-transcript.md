@@ -10,7 +10,9 @@
 
 Formato: cada pergunta tem número (Q1, Q2, ...), nível da árvore de decisão, opções apresentadas, resposta dada e, quando for o caso, a marca **REVISÃO DE DECISÃO ANTERIOR** com a pergunta que ela reabre.
 
-Contagem: 22 perguntas respondidas. 7 revisões explícitas de decisão anterior (Q6 revisa Q3, Q14 revisa Q5, Q15 revisa Q9, Q19 revisa Q1, Q20 revisa Q2, Q21 revisa Q7, Q22 revisa Q11 e Q12), mais a revisão da premissa do projeto feita pelo próprio entrevistado em Q2.
+Contagem: 25 perguntas respondidas. 10 revisões explícitas de decisão anterior (Q6 revisa Q3, Q14 revisa Q5, Q15 revisa Q9, Q19 revisa Q1, Q20 revisa Q2, Q21 revisa Q7, Q22 revisa Q11 e Q12, Q23 revisa Q2, Q24 revisa Q7 e Q21, Q25 revisa o registro de Q1 e Q2), mais a revisão da premissa do projeto feita pelo próprio entrevistado em Q2.
+
+Registro: nas perguntas Q1, Q2 e Q3 há uma **Resposta consolidada**, escrita em 28/09 depois das rodadas 6 e 7, seguida da **Resposta original** de 27/09, preservada na íntegra. A consolidada é a resposta que vale para o protocolo; a original mostra como a decisão evoluiu (decisão da Q25).
 
 ---
 
@@ -20,22 +22,22 @@ Contagem: 22 perguntas respondidas. 7 revisões explícitas de decisão anterior
 
 ### Q1. Qual é a pergunta da REVISÃO (não a da dissertação)?
 - Opções: (A) três frentes integradas: gênero do julgador, sentimento em texto jurídico, judicialização da saúde; (B) duas frentes; (C) uma frente estreita só de linguagem.
-- **Resposta:** "A pergunta a ser respondida é se há viés decisório entre juízes e juízas nos Tribunais Regionais Federais (6) e Tribunais de Justiça (27) acerca do assunto de saúde."
-- **Nota do entrevistador:** a resposta não escolhe nenhuma opção e reformula a pergunta em torno de *viés decisório*, não de *tom*. A mudança de escopo ficou sem justificativa nesta rodada e sem dizer quais frentes a nova pergunta implica. Isso abre a Q2 e, mais tarde, a Q19.
-- **Complemento dado na Q19 (28/09):** a pergunta implica três frentes de literatura: (1) gênero do julgador e desfecho da decisão; (2) teoria: representação, in-group bias e socialização profissional como hipótese nula; (3) judicialização da saúde no Brasil como contexto do corpus. PLN jurídico não é frente, é nota de justificativa.
+- **Resposta consolidada (28/09, após Q19, Q20, Q23 e Q25):** a pergunta da revisão é: *há viés decisório entre juízes e juízas nos 6 Tribunais Regionais Federais e nos 27 Tribunais de Justiça em ações de saúde?* Ela substitui a pergunta original sobre *tom* por três razões. Primeira, o tom era medido por LLM sem validação contra julgamento humano, um juízo subjetivo sobre outro juízo subjetivo, o que era o ponto de fragilidade do desenho. Segunda, o orientador orientou trocar a classificação por tom pela formação de grupos comparáveis (clusterização por tribunal, ano e magistrado), para que a diferença entre juízes e juízas fosse medida em desfechos rotulados externamente pelo DataJud: procedência e concessão de urgência. Terceira, esse é o desenho do artigo-base de Laneuville & Possebom, que compara desfechos dentro de estratos, e não a linguagem das decisões. A pergunta implica três frentes de literatura: (1) gênero do julgador e desfecho da decisão, incluindo como o efeito é identificado; (2) teoria: representação e "different voice" (Gilligan), in-group bias, socialização profissional como hipótese nula; (3) judicialização da saúde no Brasil como contexto do corpus. PLN jurídico não é frente, é nota de justificativa. Fora do escopo: tom, sentimento e estilo linguístico como variável dependente; tempo até sentença como frente de literatura.
+- **Resposta original (27/09):** "A pergunta a ser respondida é se há viés decisório entre juízes e juízas nos Tribunais Regionais Federais (6) e Tribunais de Justiça (27) acerca do assunto de saúde."
+- **Nota do entrevistador:** a resposta original não escolhe nenhuma opção e reformula a pergunta em torno de *viés decisório*, não de *tom*, sem justificar a mudança nem dizer quais frentes a nova pergunta implica. Isso abriu a Q2 e, mais tarde, a Q19, Q20 e Q23, cujas respostas estão incorporadas na consolidada.
 
 ### Q2. O que é "tom" na sua revisão?
 - Opções: (A) sentimento polar + estilo linguístico; (B) só sentimento polar; (C) emoções discretas.
-- **Resposta:** "Não consideramos mais o tom decisório, visto que essa extração provinha de um modelo de LLM. Agora vamos utilizar clusterização por tribunal, ano e magistrado."
+- **Resposta consolidada (28/09, após Q20, Q21, Q23, Q24 e Q25):** o tom não é mais construto da revisão. **Por quê:** o rótulo de tom vinha do LLM sem validação contra julgamento humano (kappa). Isso é uma avaliação subjetiva em cima de outra avaliação que já é subjetiva, a sentença. Sem validação não há como saber o que a variável mede, nem usar as classificações num modelo de machine learning. Essa subjetividade era o ponto de fragilidade do desenho, e por isso o orientador orientou substituir a classificação por tom pela clusterização, isto é, pela formação de grupos comparáveis de decisões. **O que entra no lugar:** estratos de comparação tribunal × ano, com erro-padrão agrupado por magistrado. **De onde vem:** do artigo-base. Laneuville & Possebom comparam desfechos dentro de comarca × trimestre no TJSP, explorando o sorteio de processos entre varas competentes (CPC/2015, art. 285). Nos 33 tribunais a comarca fica esparsa (3.251 unidades de origem, mediana de 13 processos, e 437 de 636 comarcas medidas têm um só gênero), então o estrato adotado é tribunal × ano de ajuizamento. O custo declarado: dentro de tribunal × ano, juiz e juíza podem estar em comarcas diferentes, e o que sustenta a comparação passa a ser o teste de balanceamento de covariáveis (assunto, tipo de réu, gênero da parte), não a aleatoriedade do sorteio. A comarca sai de graça do número CNJ e serve como teste de robustez nas 145 comarcas que têm os dois gêneros no mesmo ano. **Como responde à Q1:** a diferença de procedência e de concessão de urgência entre juízes e juízas dentro do estrato é a medida de viés decisório. **Magistrado:** entra como cluster de erro-padrão, porque cada juiz decide muitos casos e os erros são correlacionados dentro dele. Não entra como efeito fixo, porque o gênero não varia dentro do juiz e seria absorvido.
+- **Resposta original (27/09):** "Não consideramos mais o tom decisório, visto que essa extração provinha de um modelo de LLM. Agora vamos utilizar clusterização por tribunal, ano e magistrado."
 - **Revisão da premissa do projeto (pelo entrevistado):** o construto "tom por LLM", que era a variável dependente do piloto TJCE e do título, sai do desenho.
-- **Nota do entrevistador:** a resposta diz *que* o tom saiu e *o que* entra no lugar, mas não diz *por que* nem *como* a clusterização responde à pergunta da Q1. Duas dependências pendentes, resolvidas em Q20 e Q21.
-- **Complemento dado na Q20 (28/09), justificativa do abandono:** "O rótulo de tom vinha do LLM sem validação contra julgamento humano (kappa), o que indicaria uma avaliação subjetiva em cima de outra avaliação que já é por si só também subjetiva. Sem isso, não há como saber o que a variável mede ou sequer utilizar as classificações num modelo de machine learning."
-- **Complemento dado na Q21 (28/09), relação com a pergunta:** "clusterização" significa estratos de comparação tribunal × ano com erro-padrão agrupado por magistrado. Dentro do estrato, o processo é distribuído por sorteio entre varas (CPC/2015, art. 285), então juiz e juíza recebem casos comparáveis, e a diferença de procedência dentro do estrato é a medida de viés decisório da Q1.
+- **Nota do entrevistador:** a resposta original diz *que* o tom saiu e *o que* entra no lugar, mas não diz *por que*, nem *de onde vem* o desenho, nem *como* ele responde à pergunta da Q1. Dependências resolvidas em Q20 (por quê), Q21 (como), Q23 (de onde vem e a que custo) e Q24 (papel do magistrado), todas incorporadas na consolidada. A fonte da adaptação de comarca × trimestre para tribunal × ano é a seção 0.8 do documento `docs/matriz-artigo-x-relatorio.md` do repositório da dissertação.
 
 ### Q3. A revisão inclui estudos sobre efeito do gênero no RESULTADO da decisão ou só na LINGUAGEM?
 - Opções: (A) resultado e linguagem; (B) só linguagem; (C) resultado como secundário.
-- **Resposta:** (A) Resultado e linguagem.
-- **Nota do entrevistador:** conflita com Q2. Dependência pendente, resolvida em Q6.
+- **Resposta consolidada (28/09, após Q6 e Q19):** resultado como frente principal. Linguagem não é frente: entra só como nota de justificativa, com 3 a 5 referências de PLN jurídico que documentam por que o tom foi abandonado.
+- **Resposta original (27/09):** (A) Resultado e linguagem.
+- **Nota do entrevistador:** a resposta original conflitava com Q2, que já tinha retirado o tom. Dependência resolvida em Q6 (linguagem vira secundária) e Q19 (deixa de ser frente).
 
 ### Q4. Escopo geográfico e de idioma?
 - Opções: (A) internacional, inglês + português; (B) só Brasil; (C) inglês, português e espanhol.
@@ -161,6 +163,28 @@ Contagem: 22 perguntas respondidas. 7 revisões explícitas de decisão anterior
 
 ---
 
+## Rodada 7 (28/09) — Nível 1 reaberto: de onde vem a clusterização e como registrá-la
+
+**Resumo do acordo antes da rodada:** viés decisório em procedência e urgência; estratos tribunal × ano como identificação; erro-padrão agrupado por magistrado; tom abandonado por falta de validade.
+**Ponto cego:** o autograder avalia cada resposta no lugar em que aparece, e as respostas da Q1 e Q2 continuavam curtas, com as justificativas só na rodada 6. Além disso, a Q2 dizia "clusterização por tribunal, ano e magistrado" sem dizer de onde vinha esse desenho (Laneuville & Possebom comparam dentro de comarca × trimestre) nem por que foi adaptado. E "magistrado" como cluster tem uma armadilha: efeito fixo de magistrado absorveria o gênero.
+
+### Q23. REVISÃO DA Q2: de onde vem a "clusterização" e por que tribunal × ano em vez do desenho original de Possebom?
+- Opções: (A) adaptação declarada com custo: Possebom compara dentro de comarca × trimestre explorando o sorteio entre varas; nos 33 tribunais a comarca fica esparsa, então o estrato vira tribunal × ano, e o balanceamento de covariáveis substitui o sorteio; (B) mesmo desenho do artigo, comarca × trimestre; (C) tribunal × ano principal, comarca como robustez.
+- **Resposta:** "A subjetividade do tom era um ponto de fragilidade. Por conta disso o orientador orientou o uso de clusterização como alternativa para criação dos grupos similares, ao invés de classificar via tom com LLM e subjetividade."
+- **REVISÃO DE DECISÃO ANTERIOR: revisa Q2.** A resposta dá a origem da decisão, que faltava: a clusterização é orientação do orientador, motivada pela fragilidade do tom, e seu papel é formar grupos comparáveis de decisões. O entrevistador registra, com base na seção 0.8 do documento de matriz artigo × relatório do repositório da dissertação, que o desenho adotado é o (A): tribunal × ano como estrato principal, com comarca como robustez, e com o custo declarado de que o balanceamento de covariáveis substitui a garantia de sorteio. Incorporado na resposta consolidada da Q2.
+
+### Q24. REVISÃO DA Q7 e Q21: o magistrado entra como cluster de erro-padrão ou como efeito fixo?
+- Opções: (A) cluster de erro-padrão, sem efeito fixo: cada juiz decide muitos casos e os erros são correlacionados dentro dele; efeito fixo é impossível porque o gênero não varia dentro do juiz; (B) efeito fixo de magistrado.
+- **Resposta:** (A) Cluster de erro-padrão, sem efeito fixo.
+- **REVISÃO DE DECISÃO ANTERIOR: revisa Q7 e Q21.** "Erro-padrão agrupado por magistrado" ganha a justificativa e a exclusão explícita do efeito fixo de magistrado, que absorveria a variável de interesse. Unidade de tratamento é o magistrado; unidade de observação é a decisão.
+
+### Q25. REVISÃO DO REGISTRO DE Q1 e Q2: como registrar as justificativas para que sejam avaliadas no lugar certo?
+- Opções: (A) resposta consolidada completa e autocontida, com a resposta original preservada logo abaixo; (B) substituir a original; (C) manter só complementos.
+- **Resposta:** (A) Resposta consolidada + original preservada.
+- **REVISÃO DE DECISÃO ANTERIOR: revisa o registro de Q1, Q2 e Q3.** Nada é apagado. A consolidada vale para o protocolo; a original mostra a evolução que a reflexão descreve.
+
+---
+
 ## Acordo final (estado da árvore de decisão)
 
 | Nó | Decisão | Origem |
@@ -168,8 +192,8 @@ Contagem: 22 perguntas respondidas. 7 revisões explícitas de decisão anterior
 | Pergunta da revisão | Há viés decisório entre juízes e juízas em ações de saúde nos 27 TJs e 6 TRFs? Frentes: gênero do julgador e desfecho; teoria; judicialização da saúde | Q1 revisada por Q19 |
 | Construto principal | Viés decisório = diferença por gênero do julgador em procedência e em concessão de urgência, dentro de estratos tribunal × ano × assunto | Q5 revisada por Q14 |
 | Construto secundário | Interação gênero do julgador × gênero da parte (in-group) | Q17 |
-| Construto abandonado | Tom/sentimento por LLM: sem validação por anotadores humanos, juízo subjetivo sobre juízo subjetivo | Q2 revisada por Q20 |
-| Identificação | Sorteio de processos dentro de tribunal × ano (CPC art. 285); erro-padrão agrupado por magistrado; literatura de judge effects | Q7 revisada por Q21 |
+| Construto abandonado | Tom/sentimento por LLM: sem validação por anotadores humanos, juízo subjetivo sobre juízo subjetivo. Orientador orientou clusterização no lugar | Q2 revisada por Q20 e Q23 |
+| Identificação | Estratos tribunal × ano, adaptação declarada do desenho comarca × trimestre de Laneuville & Possebom; balanceamento de covariáveis substitui o sorteio; comarca como robustez; erro-padrão agrupado por magistrado, sem efeito fixo de magistrado | Q7 revisada por Q21, Q23 e Q24 |
 | Teoria | Representação (Gilligan), in-group bias, socialização profissional como hipótese nula | Q8, Q19 |
 | Frentes | 1 gênero do julgador e desfecho; 2 teoria; 3 judicialização da saúde. PLN é nota de justificativa, não frente | Q19 |
 | Bases | Scopus, Web of Science, SciELO; Google Scholar só para snowballing | Q9 |

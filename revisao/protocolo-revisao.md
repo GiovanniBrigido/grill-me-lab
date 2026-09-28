@@ -1,14 +1,16 @@
 # Protocolo de revisão bibliográfica
 
 **Dissertação:** viés decisório entre juízes e juízas em ações de saúde no Brasil (27 TJs e 6 TRFs)
-**Origem:** fechado na entrevista grill-me de 27–28/09/2026 (ver `../grill-me-transcript.md`, 22 perguntas, 7 revisões de decisão)
-**Versão:** 1.1 (strings e frentes revisadas em 28/09, Q19 a Q22)
+**Origem:** fechado na entrevista grill-me de 27–28/09/2026 (ver `../grill-me-transcript.md`, 25 perguntas, 10 revisões de decisão)
+**Versão:** 1.2 (strings e frentes revisadas em 28/09, Q19 a Q22; origem e custo dos estratos, Q23 a Q25)
 
 ## 1. Pergunta da revisão
 
 Há viés decisório entre juízes e juízas nos Tribunais Regionais Federais e Tribunais de Justiça brasileiros em ações de saúde? O que a literatura empírica internacional e brasileira sabe sobre o efeito do gênero do julgador em decisões de 1º grau, por quais mecanismos, e como esse efeito é identificado de forma defensável?
 
-Por que "viés decisório" e não "tom" (Q2, Q20): o tom por LLM era um juízo subjetivo aplicado sobre outro juízo subjetivo (a sentença), sem validação por anotadores humanos (kappa). Sem isso não se sabe o que a variável mede. O desfecho da decisão, em contraste, é rotulado externamente pelo DataJud (`tipo_decisao`, 100% de cobertura) e pela TPU do CNJ (resultado da urgência).
+Por que "viés decisório" e não "tom" (Q2, Q20, Q23): o tom por LLM era um juízo subjetivo aplicado sobre outro juízo subjetivo (a sentença), sem validação por anotadores humanos (kappa). Sem isso não se sabe o que a variável mede. Essa fragilidade levou o orientador a indicar a clusterização, isto é, a formação de grupos comparáveis de decisões, no lugar da classificação por tom. O desfecho da decisão, em contraste, é rotulado externamente pelo DataJud (`tipo_decisao`, 100% de cobertura) e pela TPU do CNJ (resultado da urgência).
+
+Origem do desenho (Q23, Q24): Laneuville & Possebom comparam desfechos dentro de comarca × trimestre no TJSP, explorando o sorteio de processos entre varas (CPC/2015, art. 285). Nos 33 tribunais a comarca fica esparsa (3.251 unidades de origem, mediana de 13 processos, 437 de 636 comarcas medidas com um só gênero), então o estrato principal é tribunal × ano de ajuizamento, e a comarca entra como teste de robustez. O custo declarado é que, dentro de tribunal × ano, o balanceamento de covariáveis substitui a garantia do sorteio. O magistrado entra como cluster de erro-padrão e nunca como efeito fixo, que absorveria o gênero.
 
 Sub-perguntas por frente (Q19):
 
@@ -29,7 +31,7 @@ Sub-perguntas por frente (Q19):
 | Urgência (VD2) | Concessão ou não de tutela de urgência / liminar | `resultado_urgencia_1a`, via TPU do CNJ | Q5, Q14 |
 | Tempo até sentença | Dias entre ajuizamento de referência e sentença | `dias_ate_sentenca`; **exploratório, sem frente de literatura** | Q14 |
 | Interação julgador × parte | Efeito do gênero do julgador condicional ao gênero da parte autora (in-group) | gênero da parte inferido por nome e IBGE | Q17 |
-| Estrato de comparação (identificação) | Tribunal × ano de ajuizamento. Dentro do estrato o processo é distribuído por sorteio entre varas (CPC/2015, art. 285), logo juiz e juíza recebem casos comparáveis. Erro-padrão agrupado por magistrado | `tribunal`, `ano`, `nome_mag` | Q7, Q21 |
+| Estrato de comparação (identificação) | Tribunal × ano de ajuizamento, adaptação do estrato comarca × trimestre de Laneuville & Possebom. Sorteio entre varas (CPC/2015, art. 285) motiva a comparação; balanceamento de covariáveis a sustenta no estrato grosso. Comarca como robustez. Erro-padrão agrupado por magistrado, sem efeito fixo de magistrado | `tribunal`, `ano`, `nome_mag`, comarca pelo número CNJ | Q7, Q21, Q23, Q24 |
 | Tom / sentimento | **Abandonado** por falta de validade de construto. Só na nota de justificativa | — | Q2, Q20 |
 
 ## 3. Bases e estratégia de busca
