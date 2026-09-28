@@ -1,8 +1,8 @@
 # Protocolo de revisão bibliográfica
 
 **Dissertação:** viés decisório entre juízes e juízas em ações de saúde no Brasil (27 TJs e 6 TRFs)
-**Origem:** fechado na entrevista grill-me de 27–28/09/2026 (ver `../grill-me-transcript.md`, 25 perguntas, 10 revisões de decisão)
-**Versão:** 1.2 (strings e frentes revisadas em 28/09, Q19 a Q22; origem e custo dos estratos, Q23 a Q25)
+**Origem:** fechado na entrevista grill-me de 27–28/09/2026 (ver `../grill-me-transcript.md`, 28 perguntas, 11 revisões de decisão)
+**Versão:** 1.3 (strings e frentes revisadas em 28/09, Q19 a Q22; origem e custo dos estratos, Q23 a Q25; formato do registro, Q26 a Q28)
 
 ## 1. Pergunta da revisão
 
